@@ -1,0 +1,228 @@
+nav {
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    align-items: center;
+    /*justify-content: space-between;*/
+    /*justify-content: flex-start;*/
+    padding: 1rem 2rem 1rem 2rem;
+    z-index:2;
+    background-color:transparent;
+    /* backdrop-filter: blur(1rem); */
+    transition: top 0.3s;
+    top: 0;
+    width:100%;
+}
+
+.collapse-menu {
+    display: flex;
+    flex:1;
+    margin-right: 4rem;
+    flex-direction:row;
+    justify-content: space-between;
+    z-index: 1;
+    
+    /* background-color:#755642; */
+}
+
+nav .collapse-menu div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    align-items: center;
+}
+
+/* style li components in navbar */
+nav .collapse-menu li {
+    display:flex;
+    /* align-items: center;
+    justify-content: center; */
+    padding: .5rem 1rem;
+    z-index: 10000;
+    color:#FFE9D7;
+}
+ /* style link in navbar */
+nav .collapse-menu li a {
+    padding:0.5rem;
+    display:block;
+}
+nav .collapse-menu li a:hover {
+    /* background-color:#4A3628;
+    border-radius:1rem; */
+    cursor: pointer;
+    text-shadow: 0rem 0rem 1rem white;
+    transition: 0.3s ease-in-out;
+}
+input[type=checkbox] {
+    display: none;
+}
+.hamburger {
+    display:none;
+    user-select: none;
+}
+.mlh-trust-badge {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 6vw;
+    z-index: 1;
+    margin:0rem 1rem 0rem 0rem;
+}
+.wehack-logo {
+    z-index:1;
+}
+
+/* === media queries === */
+@media (max-width: 12vw) {
+    .mlh-trust-badge {
+        width: 11vw;
+    }
+}
+
+@media (max-width: 910px) {
+    nav {
+        position:fixed;
+    }
+    .mlh-trust-badge {
+        width: 11vw;
+    }
+    nav .collapse-menu {
+        display: none;
+        z-index:2;
+        background-color:#4A3628;
+        width:100%;
+        flex:100%;
+        position:absolute;
+        right:0;
+        left:0;
+    }
+    input[type=checkbox]:checked~.collapse-menu {
+        display: block;
+        z-index: 1; 
+        top:0;
+        right:0;
+        padding:5rem 1rem 2rem 1rem;
+        width:100%;
+        background-color:#4A3628;
+    }
+    .hamburger {
+        display: block;
+        font-size:2rem;
+        z-index:2;
+        top:0;
+        right:0;
+        color:#FFE9D7;
+        /* padding:0.5rem 2rem 0rem 0rem; */
+        margin:0rem 5rem 1rem 1rem;
+    }
+    .hamburger:hover {
+        cursor: pointer;
+        filter: drop-shadow(0rem 0rem 0.6rem white);
+        transition:0.3s ease-in-out;
+    }
+}
+
+@media (max-width: 750px) {
+    nav {
+        position:fixed;
+    }
+    .mlh-trust-badge {
+        width: 16vw;
+    }
+    nav .collapse-menu {
+        display: none;
+        z-index:2;
+        background-color:#4A3628;
+        width:100%;
+        flex:100%;
+        position:absolute;
+        right:0;
+        left:0;
+    }
+
+    input[type=checkbox]:checked~.collapse-menu {
+        display: block;
+        z-index: 1; 
+        top:0;
+        right:0;
+        padding:5rem 1rem 2rem 1rem;
+        width:100%;
+        background-color:#4A3628;
+    }
+    .hamburger {
+        display: block;
+        font-size:2rem;
+        z-index:2;
+        top:0;
+        right:0;
+        color:#FFE9D7;
+        /* padding:0.5rem 2rem 0rem 0rem; */
+        margin:0rem 5rem 1rem 1rem;
+    }
+    .hamburger:hover {
+        cursor: pointer;
+        filter: drop-shadow(0rem 0rem 0.6rem white);
+        transition:0.3s ease-in-out;
+    }
+}
+
+@media (max-width: 580px) {
+    nav {
+        position:fixed;
+    }
+    .mlh-trust-badge {
+        width:15vw;
+    }
+    .wehack-logo {
+        z-index: 1;
+    }
+    nav .collapse-menu {
+        display: none;
+        z-index:2;
+        background-color:#4A3628;
+        width:100%;
+        flex:100%;
+        position:absolute;
+        right:0;
+        left:0;
+    }
+
+    nav .collapse-menu li a {
+        display:flex;
+        padding:0.5rem;
+    }
+
+    nav .collapse-menu li {
+        display:flex;
+        padding:0.25rem;
+    }
+
+    input[type=checkbox]:checked~.collapse-menu {
+        display: block;
+        z-index: 1; 
+        top:0;
+        right:0;
+        padding:5rem 1rem 2rem 1rem;
+        /* width:100%;
+        height:100%; */
+        background-color:#4A3628;
+        
+    } 
+    .hamburger {
+        display: block;
+        font-size:2rem;
+        z-index:2;
+        top:0;
+        right:0;
+        color:#FFE9D7;
+        /* padding:0.5rem 2rem 0rem 0rem; */
+        margin:0rem 5rem 1rem 1rem;
+    }
+    .hamburger:hover {
+        cursor: pointer;
+        filter: drop-shadow(0rem 0rem 0.6rem white);
+        transition:0.3s ease-in-out;
+    }
+}
