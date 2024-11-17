@@ -3,16 +3,11 @@ import React from 'react';
 const Jumbotron = () => {
   return (
     <div className="relative h-screen">
-      {/* Video Background */}
-      <video 
-        autoPlay 
-        loop 
-        muted 
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
-      >
-        <source src="/goldman.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {/* Background Image */}
+      <div 
+        className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0"
+        style={{ backgroundImage: 'url(/static/images/jumbotronimage.png)' }}
+      />
 
       {/* Content Overlay */}
       <div className="relative z-10 bg-black bg-opacity-50 h-full">
