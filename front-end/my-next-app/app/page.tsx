@@ -1,13 +1,16 @@
 
-import Nav from './sections/Nav/Nav'
-import Jumbotron from './sections/Jumbotron/Jumbotron'
+import Nav from './sections/nav/page'
+import Jumbotron from './jumbotron/Jumbotron'
+import Onboarding from './onboarding/page';
+import Dashboard from './dashboard/page';
 
 export default function Home() {
   return (
     // this is where all our components will go
     <div className="App">
-      <Nav/>
       <Jumbotron/>
+      {/* <Onboarding/> */}
+      {/* <Dashboard/> */}
       {/* <About/>
       <Sponsor/>
       <FAQ/>
